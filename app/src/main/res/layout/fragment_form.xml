@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/task"
+    android:visibility="gone"
+    tools:context=".View.FormFragment"
+    tools:visibility="gone">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/Task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Add Task"
+            android:textColor="#353535"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/taskBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/taskBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/Task"
+            android:ems="10"
+            android:hint="Task"
+            android:inputType="textPersonName"
+            android:textColor="#000"
+            android:textColorHint="#7C7B7B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Task" />
+
+        <EditText
+            android:id="@+id/descriptionBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@+id/Task"
+            android:ems="10"
+            android:hint="Description"
+            android:inputType="textPersonName"
+            android:textColor="#000"
+            android:textColorHint="#7C7B7B"
+            app:layout_constraintEnd_toEndOf="@+id/taskBox"
+            app:layout_constraintStart_toStartOf="@+id/taskBox"
+            app:layout_constraintTop_toBottomOf="@+id/taskBox" />
+
+        <Button
+            android:id="@+id/iptal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_top"
+            android:text="İptal"
+            android:textColor="#353535"
+            app:layout_constraintStart_toStartOf="@+id/descriptionBox"
+            app:layout_constraintTop_toTopOf="@+id/kaydet" />
+
+        <Button
+            android:id="@+id/kaydet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_top"
+            android:text="Kaydet"
+            android:textColor="#353535"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/descriptionBox"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionBox" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
